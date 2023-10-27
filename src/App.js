@@ -1,15 +1,17 @@
+import "./App.css";
+import News from "./components/News";
 
-import './App.css';
-import NavBar from './components/NavBar';
-import React, { Component } from 'react'
+import NavBar from "./components/NavBar";
+import React, { Component } from "react";
 
 export default class App extends Component {
   render() {
     return (
-      <NavBar/>
-    )
+      <div>
+        <NavBar />
+        <News pagesize={6} />
+        
+      </div>
+    );
   }
 }
-
-
-
