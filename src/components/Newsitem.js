@@ -5,7 +5,7 @@ export default class Newsitem extends Component {
     let { title, description, imageurl, newsurl } = this.props;
     return (
       <div className="my-3">
-        <div className="card" style={{ width: "18rem" }}>
+        <div className="card" >
           <img src={!imageurl?"https://img.etimg.com/thumb/msid-96185160,width-1070,height-580,imgsize-134558,overlay-economictimes/photo.jpg":imageurl} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">{title}...</h5>
@@ -13,6 +13,7 @@ export default class Newsitem extends Component {
             <a
               href={newsurl}
               target="_blank"
+              
               className="btn btn-sm btn-primary"
             >
               Read More..
