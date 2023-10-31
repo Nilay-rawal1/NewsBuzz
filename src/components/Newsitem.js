@@ -16,6 +16,7 @@ export default class Newsitem extends Component {
                 : imageurl
             }
             className="card-img-top"
+            style={{height:"15em"}}
             alt="..."
           />
           <div className="card-body">

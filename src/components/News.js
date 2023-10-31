@@ -39,6 +39,7 @@ export default class News extends Component {
       totalResults:parseddata.totalResults,
     loading:false});
     this.props.setProgress(100);
+    //eslint-disable-next-line
   }
 
   /* 
@@ -85,6 +86,7 @@ export default class News extends Component {
     let parseddata = await data.json();
     this.setState({ articles: this.state.articles.concat(parseddata.articles), 
       totalResults:parseddata.totalResults});
+      
 
   };
 
@@ -92,7 +94,7 @@ export default class News extends Component {
   {
     return (
       <>
-        <h1 style={{margin:"20px 0px"}} className="text-center text-white">NewsBuss- Top {this.props.category} Headlines</h1>
+        <h1 style={{marginTop:"2.3em", marginBottom:"2rem"}} className="text-center text-white">NewsBuss- Top {this.props.category} Headlines</h1>
            {this.state.loading &&<Spinner/>} 
           <InfiniteScroll
           dataLength={this.state.articles.length}
@@ -106,7 +108,7 @@ export default class News extends Component {
             return (
               <div className="col-md-4" key={element.url}>
                 <Newsitem
-                  title={element.title ? element.title.slice(0, 40) : ""}
+                  title={element.title ? element.title.slice(0, 34) : ""}
                   description={
                     element.description ? element.description.slice(0, 60) : ""
                   }
