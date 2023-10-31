@@ -11,21 +11,22 @@ import {
 
 
 export default class App extends Component {
+  pageSize=15;
   render() {
     return (
         
-      <div  style={{background:"linear-gradient(89.7deg, rgb(0, 32, 95) 2.8%, rgb(132, 53, 142) 97.8%",overflow:"auto",height:"100%"}}>
+      <div  style={{background:"linear-gradient(89.7deg, rgb(22, 22, 5) 1.8%, rgb(12, 19, 50) 100%",overflow:"auto",height:"100%"}}>
         <Router>
         <NavBar />
         <Switch>
-          <Route  exact path="/"><News key="general"  pagesize={6}  country="in" category="general" /></Route>
-          <Route  exact path="/business"><News key="business"  pagesize={6}  country="in" category="business" /></Route>
-          <Route  exact path="/entertainment"><News key="entertainment"  pagesize={6}  country="in" category="entertainment" /></Route>
+          <Route  exact path="/"><News key="general"  pagesize={this.pageSize}  country="in" category="General" /></Route>
+          <Route  exact path="/business"><News key="business"  pagesize={this.pageSize}  country="in" category="Business" /></Route>
+          <Route  exact path="/entertainment"><News key="entertainment"  pagesize={this.pageSize}  country="in" category="Entertainment" /></Route>
           
-          <Route  exact path="/health"><News key="health"  pagesize={6}  country="in" category="health" /></Route>
-          <Route  exact path="/science "><News key="science"  pagesize={6}  country="in" category="science" /></Route>
-          <Route  exact path="/sports"><News key="sports"  pagesize={6}  country="in" category="sports" /></Route>
-          <Route  exact path="/technology"><News key="technology"  pagesize={6}  country="in" category="technology" /></Route>   
+          <Route  exact path="/health"><News key="health"  pagesize={this.pageSize}  country="in" category="Health" /></Route>
+          <Route  exact path="/science "><News key="science"  pagesize={this.pageSize}  country="in" category="Science" /></Route>
+          <Route  exact path="/sports"><News key="sports"  pagesize={this.pageSize}  country="in" category="Sports" /></Route>
+          <Route  exact path="/technology"><News key="technology"  pagesize={this.pageSize}  country="in" category="Technology" /></Route>   
           </Switch>
 
         </Router>
