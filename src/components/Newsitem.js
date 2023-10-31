@@ -6,7 +6,7 @@ export default class Newsitem extends Component {
     return (
       <div className="my-3">
         <div className="card" style={{border:" 3px groove grey"}}>
-        <span class="position-absolute   translate-middle badge rounded-pill bg-danger" style={{left:'90%',zIndex:"1"}}>
+        <span class="position-absolute   translate-middle badge rounded-pill bg-danger" style={{left:'83%',zIndex:"1",top:"2%"}}>
               {source}
             </span>
           <img
