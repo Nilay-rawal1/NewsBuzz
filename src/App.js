@@ -13,7 +13,7 @@ import {
 
 export default class App extends Component {
  
-  apikey=process.env.REACT_APP_NEWS_API
+ 
   state={
         progress:0
   }
@@ -35,14 +35,14 @@ export default class App extends Component {
         
       />
         <Switch>
-          <Route  exact path="/"><News  setProgress={this.setProgress} apikey={this.apikey}     key="general"  pagesize={this.pageSize}  country="in" category="General" /></Route>
-          <Route  exact path="/business"><News  setProgress={this.setProgress} apikey={this.apikey}     key="business"  pagesize={this.pageSize}  country="in" category="Business" /></Route>
-          <Route  exact path="/entertainment"><News  setProgress={this.setProgress} apikey={this.apikey}     key="entertainment"  pagesize={this.pageSize}  country="in" category="Entertainment" /></Route>
+          <Route  exact path="/"><News  setProgress={this.setProgress}      key="general"  pagesize={this.pageSize}  country="in" category="General" /></Route>
+          <Route  exact path="/business"><News  setProgress={this.setProgress}      key="business"  pagesize={this.pageSize}  country="in" category="Business" /></Route>
+          <Route  exact path="/entertainment"><News  setProgress={this.setProgress}      key="entertainment"  pagesize={this.pageSize}  country="in" category="Entertainment" /></Route>
           
-          <Route  exact path="/health"><News  setProgress={this.setProgress} apikey={this.apikey}     key="health"  pagesize={this.pageSize}  country="in" category="Health" /></Route>
-          <Route  exact path="/science "><News  setProgress={this.setProgress} apikey={this.apikey}     key="science"  pagesize={this.pageSize}  country="in" category="Science" /></Route>
-          <Route  exact path="/sports"><News  setProgress={this.setProgress} apikey={this.apikey}     key="sports"  pagesize={this.pageSize}  country="in" category="Sports" /></Route>
-          <Route  exact path="/technology"><News  setProgress={this.setProgress} apikey={this.apikey}     key="technology"  pagesize={this.pageSize}  country="in" category="Technology" /></Route>   
+          <Route  exact path="/health"><News  setProgress={this.setProgress}      key="health"  pagesize={this.pageSize}  country="in" category="Health" /></Route>
+          <Route  exact path="/science "><News  setProgress={this.setProgress}      key="science"  pagesize={this.pageSize}  country="in" category="Science" /></Route>
+          <Route  exact path="/sports"><News  setProgress={this.setProgress}      key="sports"  pagesize={this.pageSize}  country="in" category="Sports" /></Route>
+          <Route  exact path="/technology"><News  setProgress={this.setProgress}      key="technology"  pagesize={this.pageSize}  country="in" category="Technology" /></Route>   
           </Switch>
 
         </Router>
