@@ -5,7 +5,7 @@ export default class Newsitem extends Component {
     let { title, description, imageurl, newsurl, author, date,source } = this.props;
     return (
       <div className="my-3">
-        <div className="card" style={{border:" 3px groove grey"}}>
+        <div className="card " style={{border:" 3px groove black"}}>
         <span class="position-absolute   translate-middle badge rounded-pill bg-danger" style={{left:'83%',zIndex:"1",top:"2%"}}>
               {source}
             </span>
@@ -19,12 +19,12 @@ export default class Newsitem extends Component {
             style={{height:"15em"}}
             alt="..."
           />
-          <div className="card-body">
+          <div className="card-body bg-gradient">
             <h5 className="card-title">{title}...  </h5>
             <p className="card-text">{description}... </p>
             <p class="card-text">
               <small class="text-muted">
-                by {!author ? "unknown" : author} on{" "}
+                by {!author ? "unknown" : author} <br/>
                 {new Date(date).toGMTString()}
               </small>
             </p>
