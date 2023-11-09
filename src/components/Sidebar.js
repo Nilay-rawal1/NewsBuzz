@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import "./Sidebar.css";
 
 const Sidebar = () => {
   const [city, setCity] = useState('');
@@ -38,7 +39,7 @@ const Sidebar = () => {
       <h2>Weather</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          City:
+          Enter City Name:
           <input
             type="text"
             value={city}
