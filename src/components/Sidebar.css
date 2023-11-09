@@ -1,0 +1,18 @@
+.sidebar {
+    width: 60px; /* Set your desired width */
+    height: 100%;
+    background-color: #333;
+    transition: width 0.3s ease; /* Add smooth transition effect */
+  }
+  
+  .sidebar.expanded {
+    width: 200px; /* Set your expanded width */
+  }
+  
+  .sidebar h2 {
+    color: #fff;
+  }
+  
+  .sidebar p {
+    color: #fff;
+  }
