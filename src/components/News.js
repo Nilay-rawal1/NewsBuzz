@@ -3,6 +3,7 @@ import Newsitem from "./Newsitem";
 import Spinner from "./Spinner";
 import PropTypes from 'prop-types'
 import InfiniteScroll from "react-infinite-scroll-component";
+import "./Sidebar.css"
 export default class News extends Component {
     static defaultProps={
       country:'in',
