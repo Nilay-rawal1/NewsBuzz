@@ -6,7 +6,7 @@ const Sidebar = () => {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
 
-  const apiKey = '449764ac36821fe576e0798dc6fc7cd0'; // Replace with your OpenWeather API key
+  const apiKey = '449764ac36821fe576e0798dc6fc7cd0';
 
   const fetchWeather = (city) => {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;

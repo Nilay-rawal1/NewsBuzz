@@ -1,14 +1,21 @@
-
+.container{
+  display: flex;
+  margin-left: 200px;
+}
 .sidebar {
-  width: 300px;
+  
+  width: 200px;
   padding: 20px;
   background-color: whitesmoke;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-right: 20px;
   top: 20px;
+  position: fixed;
+  
 }
 h2 {
+  margin-top: 50px;
   color: #333;
   text-align: center;
 }
