@@ -35,7 +35,8 @@ const Sidebar = () => {
     return `http://openweathermap.org/img/w/${iconCode}.png`;
     };
   return (
-    <div className="sidebar">
+   
+    <div className="sidebar project-card-view">
       <h2 className='wh2'>Weather</h2>
       <form onSubmit={handleSubmit}>
         <label className='labels'>
@@ -60,6 +61,7 @@ const Sidebar = () => {
         </div>
       )}
     </div>
+   
   );
 };
 

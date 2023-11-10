@@ -10,6 +10,7 @@
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-right: 20px;
+  margin-left: 10px;
   border: 2px solid purple ;
   position: fixed;
   top:15%;
@@ -72,4 +73,14 @@ p {
   max-width: 50px;
   max-height: 50px;
   margin-top: 10px;
+}
+
+@media (max-width: 867px) {
+  .sidebar{
+    display: none;
+  }
+  .container{
+
+    margin-left: 0;
+  }
 }
