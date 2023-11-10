@@ -4,11 +4,11 @@ export default class Newsitem extends Component {
   render() {
     let { title, description, imageurl, newsurl, author, date,source } = this.props;
     return (
-      <div className="my-3">
-        <div className="card " style={{border:" 3px groove black"}}>
+      <div className="my-4 " >
+        <div className="card " style={{border:" 1px solid purple"}}>
         <span class="position-absolute   translate-middle badge rounded-pill bg-danger" style={{left:'83%',zIndex:"1",top:"2%"}}>
               {source}
-            </span>
+            </span> 
           <img
             src={
               !imageurl
@@ -33,6 +33,7 @@ export default class Newsitem extends Component {
               target="_blank"
               rel="noreferrer"
               className="btn btn-sm btn-dark"
+              style={{background:"linear-gradient( 89.7deg, rgb(22, 22, 5) 1.8%, rgb(12, 19, 50) 100%)"}}
             >
               Read More..
             </a>

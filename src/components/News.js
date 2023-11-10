@@ -3,7 +3,7 @@ import Newsitem from "./Newsitem";
 import Spinner from "./Spinner";
 import PropTypes from 'prop-types'
 import InfiniteScroll from "react-infinite-scroll-component";
-import "./Sidebar.css"
+
 export default class News extends Component {
     static defaultProps={
       country:'in',
@@ -107,7 +107,7 @@ export default class News extends Component {
           <div className="row">
           {this.state.articles.map((element) => {
             return (
-              <div className="col-md-4" key={element.url}>
+              <div className="col-md-4 " key={element.url}>
                 <Newsitem
                   title={element.title ? element.title.slice(0, 34) : ""}
                   description={
