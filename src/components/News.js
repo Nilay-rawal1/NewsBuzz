@@ -97,7 +97,7 @@ export default class News extends Component {
     return (
       <>
     
-        <h1 style={{marginTop:"2.3em", marginBottom:"2rem"}} className="text-center text-white">NewsBuss- Top {this.props.category} Headlines</h1>
+        <h1 style={{marginTop:"2.3em", marginBottom:"2rem"}} className="text-center newsbuzz text-white">NewsBuss- Top {this.props.category} Headlines</h1>
            {this.state.loading &&<Spinner/>} 
           <InfiniteScroll
           dataLength={this.state.articles.length}
