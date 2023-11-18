@@ -6,15 +6,20 @@
   
   .login a {
     display: inline-block;
-    padding: 10px 15px;
-    background-color: #87CEEB; /* Light blue color */
+    padding: 8px 12px;
+    box-shadow: 0 4px 2px 4px rgba(119, 53, 136, 0.459) !important;
+    background:linear-gradient( 89.7deg, rgb(22, 22, 5) 1.8%, rgb(12, 19, 50) 100%); /* Light blue color */
     color: #fff; /* White text color */
     text-decoration: none;
+    border: 1px solid darkorchid;
     border-radius: 8px; /* Rounded corners */
   }
   
   .login a:hover {
-    background-color: #5F9EA0; /* Light blue color on hover */
+    transform: scale(.95) !important;
+    box-shadow: 0 4px 2px 3px rgba(129, 72, 144, 0.561) !important;
+    background: purple; /* Light blue color on hover */
+    
   }
   
   .login-right {
