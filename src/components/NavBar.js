@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import './navbar.css'
 
 export class navbar extends Component {
   
@@ -37,9 +38,15 @@ export class navbar extends Component {
               <li className="nav-item">
                 <Link className="nav-link" to="/sports">Sports</Link>
               </li>
+
               <li className="nav-item">
                 <Link className="nav-link" to="/technology">Technology</Link>
               </li>
+
+              <li className='login login-right'>
+                <Link to='/'>Register/Login</Link>
+              </li>
+
              
               
               
