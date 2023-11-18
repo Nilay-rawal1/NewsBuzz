@@ -1,9 +1,11 @@
 import "./App.css";
 import News from "./components/News";
 import NavBar from "./components/NavBar";
-import React, { Component } from "react";
+import React, { Component} from "react";
 import Sidebar from "./components/Sidebar";
 import LoadingBar from 'react-top-loading-bar'
+
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,30 +14,39 @@ import {
 } from "react-router-dom";
 
 
+
+  
+
 export default class App extends Component {
- 
- 
+
+
   state={
         progress:0
   }
   
   pageSize=15;
   setProgress =(progress) =>{
+
     this.setState({progress:progress})
   }
   render() {
+    
+   
     return (
-      <div style={{ display: "flex", height: "100%" }}>
-        <Sidebar/>
-        <div  style={{background:"linear-gradient(89.7deg, rgb(22, 22, 5) 1.8%, rgb(12, 19, 50) 100%",overflow:"auto",height:"100%"}}>
+      <>
+         
+       
+        <div  style={{background:"linear-gradient(89.7deg, rgb(22, 22, 5) 1.8%, rgb(12, 19, 50) 100%" ,overflow:"auto",height:"100%"}}>
+        <div style={{ display: "flex"}}>  <Sidebar/></div>
+        
           <Router>
           <NavBar />
           <LoadingBar
           color='#7c8dd9'
           height={4}
-          progress={this.state.progress}
-          
-        />
+          progress={this.state.progress}/>
+
+       
           <Switch>
             <Route  exact path="/"><News  setProgress={this.setProgress}      key="general"  pagesize={this.pageSize}  country="in" category="General" /></Route>
             <Route  exact path="/business"><News  setProgress={this.setProgress}      key="business"  pagesize={this.pageSize}  country="in" category="Business" /></Route>
@@ -49,7 +60,7 @@ export default class App extends Component {
 
           </Router>
         </div>
-      </div>
+      </>
 
     
     );

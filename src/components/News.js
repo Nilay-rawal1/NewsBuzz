@@ -3,7 +3,8 @@ import Newsitem from "./Newsitem";
 import Spinner from "./Spinner";
 import PropTypes from 'prop-types'
 import InfiniteScroll from "react-infinite-scroll-component";
-import "./Sidebar.css"
+
+
 export default class News extends Component {
     static defaultProps={
       country:'in',
@@ -61,7 +62,8 @@ export default class News extends Component {
   {
     return (
       <>
-        <h1 style={{marginTop:"2.3em", marginBottom:"1rem", marginLeft:"10rem"}} className="text-center text-white">Top {this.props.category} Headlines</h1>
+      <h1 style={{marginTop:"2.3em", marginBottom:"1rem", marginLeft:"10rem"}} className="text-center text-white">Top {this.props.category} Headlines</h1>
+
            {this.state.loading &&<Spinner/>} 
           <InfiniteScroll
           dataLength={this.state.articles.length}
@@ -73,7 +75,7 @@ export default class News extends Component {
           <div className="row">
           {this.state.articles.map((element) => {
             return (
-              <div className="col-md-4" key={element.url}>
+              <div className="col-md-4 project-card" key={element.url}>
                 <Newsitem
                   title={element.title ? element.title.slice(0, 34) : ""}
                   description={

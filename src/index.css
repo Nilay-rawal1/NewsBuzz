@@ -1,0 +1,31 @@
+.project-card-view:hover {
+    transform: scale(1.05) !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+  }
+
+  .project-card-view {
+    box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+    color: white !important;
+    background-color: transparent !important;
+    opacity: 0.9 !important;
+    transition: all 0.5s ease 0s !important;
+    height: 100% !important;
+  }
+
+  .project-card {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    padding-left: 32px !important;
+    padding-right: 10px !important;
+    height: auto !important;
+    z-index: 1;
+  }
+
+  nav{
+    color: white !important;
+    background: linear-gradient(89.7deg, rgb(22, 22, 5) 1.8%, rgb(12, 19, 50) 100%);
+    box-shadow: 2px 4px 5px 4px rgba(119, 53, 136, 0.459) !important;
+    border-bottom: 2px solid purple;
+  }
+  
