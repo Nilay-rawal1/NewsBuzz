@@ -4,6 +4,9 @@ import NavBar from "./components/NavBar";
 import React, { Component} from "react";
 import Sidebar from "./components/Sidebar";
 import LoadingBar from 'react-top-loading-bar'
+import Register from "./components/Register";
+import Login from "./components/Login";
+import NewsUpload from "./components/NewsUpload";
 import {
   BrowserRouter as Router,
   Switch,
