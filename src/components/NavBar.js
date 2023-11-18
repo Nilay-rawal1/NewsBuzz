@@ -45,8 +45,15 @@ export class navbar extends Component {
                 <Link className="nav-link" to="/technology">Technology</Link>
               </li>
 
+              <li>
+                <Link to="/dashboard">Dashboard</Link>
+              </li>
+
               <li className='login login-right'>
-                <Link to='register'>Register/Login</Link>
+                <Link to='register'>Register</Link>
+              </li>
+              <li className='login'>
+                <Link to='login'>Login</Link>
               </li>
 
              

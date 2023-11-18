@@ -1,10 +1,14 @@
-// Register.js
+// Assuming this is your Register component
+
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom'; // Import useHistory
+import './Register.css';
 
 const Register = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const history = useHistory(); // Initialize useHistory
 
   const handleRegister = async () => {
     try {
@@ -13,6 +17,8 @@ const Register = () => {
         password,
       });
       console.log('Registration successful');
+      // Redirect to login after successful registration
+      history.push('/Login');
     } catch (error) {
       console.error('Registration failed:', error.response.data.error);
     }

@@ -1,7 +1,7 @@
 // authRoutes.js
 const express = require('express');
 const bcrypt = require('bcrypt');
-const User = require('./models');
+const User = require('./models/models');
 
 const router = express.Router();
 const saltRounds = 10;

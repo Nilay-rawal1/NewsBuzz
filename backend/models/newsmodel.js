@@ -1,10 +1,11 @@
 // newsModel.js
-const mongoose = require('./db'); // Import your mongoose connection
+const mongoose = require('../db');
 
 const newsSchema = new mongoose.Schema({
   title: { type: String, required: true },
   content: { type: String, required: true },
-  // Add more fields as needed, such as author, date, etc.
+  author: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+  createdAt: { type: Date, default: Date.now },
 });
 
 const News = mongoose.model('News', newsSchema);
