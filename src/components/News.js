@@ -31,7 +31,7 @@ export default class News extends Component {
   }
   async componentDidMount() {
     this.props.setProgress(10);
-    let url =`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=f722eb14c7a4416ea26640e058592aa2&page=1&pagesize=${this.props.pagesize}`;
+    let url =`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=7310a9f750e7489989d145ee2c1a00dc&page=1&pagesize=${this.props.pagesize}`;
     this.setState({loading:true});
     let data = await fetch(url);
     let parseddata = await data.json();
@@ -43,40 +43,6 @@ export default class News extends Component {
     //eslint-disable-next-line
   }
 
-  /* 
-  handleNextClick= async ()=>{
-    if( !(this.state.page +1 > Math.ceil(this.state.totalResults/this.props.pagesize))){
-      let url =`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=f722eb14c7a4416ea26640e058592aa2&page=${this.state.page +1}&pagesize=${this.props.pagesize}`;   
-      this.setState({loading:true});
-      let data = await fetch(url);
-
-      let parseddata = await data.json();
-      
-      this.setState({ 
-        page: this.state.page +1,
-        articles: parseddata.articles,
-      loading:false  });
-    }
-    
-            
-    
-
-   
-
-  }
-  handlePrevClick= async ()=>{
-    
-    const url =`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=f722eb14c7a4416ea26640e058592aa2&page=${this.state.page - 1}&pagesize=${this.props.pagesize}`;   
-    this.setState({loading:true});
-    let data = await fetch(url);
-    let parseddata = await data.json();
-    this.setState({ 
-      page: this.state.page - 1,
-      articles: parseddata.articles,
-    loading:false
-    });
-
-  }\*/
   fetchMoreData = async() => {
     
     
@@ -95,7 +61,7 @@ export default class News extends Component {
   {
     return (
       <>
-        <h1 style={{marginTop:"2.3em", marginBottom:"2rem"}} className="text-center text-white">NewsBuss- Top {this.props.category} Headlines</h1>
+        <h1 style={{marginTop:"2.3em", marginBottom:"1rem", marginLeft:"10rem"}} className="text-center text-white">Top {this.props.category} Headlines</h1>
            {this.state.loading &&<Spinner/>} 
           <InfiniteScroll
           dataLength={this.state.articles.length}
