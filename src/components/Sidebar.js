@@ -35,12 +35,13 @@ const Sidebar = () => {
     return `http://openweathermap.org/img/w/${iconCode}.png`;
     };
   return (
-    <div className="sidebar">
-      <h2>Weather</h2>
+   
+    <div className="sidebar project-card-view">
+      <h2 className='wh2'>Weather</h2>
       <form onSubmit={handleSubmit}>
-        <label>
+        <label className='labels'>
           Enter City Name:
-          <input
+          <input className='city'
             type="text"
             value={city}
             onChange={(e) => setCity(e.target.value)}
@@ -49,17 +50,18 @@ const Sidebar = () => {
         <button type="submit">Get Weather</button>
       </form>
       {weather && (
-        <div>
+        <div className='detail'>
           <p>City: {weather.name}</p>
           <p>Temperature: {weather.main.temp} °C</p>
           <p>Condition: {weather.weather[0].description}</p>
-          <img
+          <img className='wimg'
             src={getWeatherIcon(weather.weather[0].icon)}
             alt={weather.weather[0].description}
           />
         </div>
       )}
     </div>
+   
   );
 };
 
