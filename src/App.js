@@ -4,6 +4,10 @@ import NavBar from "./components/NavBar";
 import React, { Component } from "react";
 import Sidebar from "./components/Sidebar";
 import LoadingBar from 'react-top-loading-bar'
+
+import Register from './components/Register';
+import Login from './components/Login';
+import NewsUpload from './components/NewsUpload';
 import {
   BrowserRouter as Router,
   Switch,
@@ -30,6 +34,14 @@ export default class App extends Component {
         <div  style={{background:"linear-gradient(89.7deg, rgb(22, 22, 5) 1.8%, rgb(12, 19, 50) 100%",overflow:"auto",height:"100%"}}>
           <Router>
           <NavBar />
+          <hr />
+          <hr />
+          <hr />
+          <Register />
+          <hr />
+          <Login />
+          <hr/>
+          <NewsUpload />
           <LoadingBar
           color='#7c8dd9'
           height={4}
@@ -45,6 +57,7 @@ export default class App extends Component {
             <Route  exact path="/science "><News  setProgress={this.setProgress}      key="science"  pagesize={this.pageSize}  country="in" category="Science" /></Route>
             <Route  exact path="/sports"><News  setProgress={this.setProgress}      key="sports"  pagesize={this.pageSize}  country="in" category="Sports" /></Route>
             <Route  exact path="/technology"><News  setProgress={this.setProgress}      key="technology"  pagesize={this.pageSize}  country="in" category="Technology" /></Route>   
+            <Route path ="/register" Component={Register} pagesize={this.pageSize}/>
             </Switch>
 
           </Router>

@@ -44,7 +44,7 @@ export class navbar extends Component {
               </li>
 
               <li className='login login-right'>
-                <Link to='/'>Register/Login</Link>
+                <Link to='register'>Register/Login</Link>
               </li>
 
              
