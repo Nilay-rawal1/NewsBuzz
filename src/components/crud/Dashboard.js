@@ -45,7 +45,7 @@ const Dashboard = () => {
   }, []); // Fetch articles on component mount
 
   return (
-    <div>
+    <div className='contain'>
       <h2>Dashboard</h2>
       <div>
         <h3>Your Articles</h3>
@@ -61,8 +61,8 @@ const Dashboard = () => {
           ))}
         </ul>
       </div>
-      <div>
-        <h3>Upload New Article</h3>
+      <div class="box">
+        <h3 class="heading">Upload New Article</h3>
         <input
           type="text"
           placeholder="Title"
