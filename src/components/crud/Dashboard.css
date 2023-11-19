@@ -2,9 +2,11 @@
 .box {
     width: 600px;
     margin: 20px auto;
+    margin-top: 90px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 20px;
+    box-shadow: 3px 6px 5px 8px rgba(119, 53, 136, 0.759) !important;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
   }
 
@@ -14,7 +16,7 @@
 }
 
 input[type="text"] {
-    text-align: center;
+    
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -29,4 +31,8 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 10px;
     margin-bottom: 10px;
+}
+
+.contain{
+  height: 44.2em;
 }

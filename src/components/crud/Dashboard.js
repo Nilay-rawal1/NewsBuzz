@@ -45,7 +45,7 @@ const Dashboard = () => {
   }, []); // Fetch articles on component mount
 
   return (
-    <div>
+    <div className='contain'>
       <h2>Dashboard</h2>
       <div>
         <h3>Your Articles</h3>
