@@ -13,7 +13,7 @@
   margin-left: 10px;
   border: 2px solid purple ;
   position: fixed;
-  top:15%;
+  top:25%;
   max-height: 28em;
   
 }
@@ -40,7 +40,7 @@
   box-sizing: border-box;
 }
 
-button {
+ button {
   width: 100%;
   padding: 10px;
   background:linear-gradient( 89.7deg, rgb(22, 22, 5) 1.8%, rgb(12, 19, 50) 100%);
@@ -52,7 +52,7 @@ button {
   border: 5px solid rgb(12, 19, 50);
 }
 
-button:hover {
+ button:hover {
   background: purple;
 }
 

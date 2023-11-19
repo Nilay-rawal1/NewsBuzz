@@ -2,11 +2,12 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    
   }
   
   .login a {
     display: inline-block;
-    padding: 8px 12px;
+    padding: 6px 8px;
     box-shadow: 0 4px 2px 4px rgba(119, 53, 136, 0.459) !important;
     background:linear-gradient( 89.7deg, rgb(22, 22, 5) 1.8%, rgb(12, 19, 50) 100%); /* Light blue color */
     color: #fff; /* White text color */
@@ -23,5 +24,5 @@
   }
   
   .login-right {
-    margin-left:45vw;
+    margin-left:40vw;
   }

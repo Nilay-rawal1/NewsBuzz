@@ -1,28 +1,26 @@
-/* Login.css */
-.container {
-    margin-top: 100vh;
+/* Register.css */
+.contres {
     max-width: 400px;
-    
+    margin: auto;
+    margin-top: 100px;
     padding: 20px;
   }
-  
-  .logininput {
-    margin-top: 10vh;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+
+
+  .borform{
+    align-items: center ;
+    box-shadow: 3px 6px 5px 8px rgba(119, 53, 136, 0.759) !important;
+    width: 490px;
+    padding: 40px;
+    margin-bottom: 30px;
+    border: 2px solid darkorchid;
+    border-radius: 15px ;
   }
   
-  button {
-    width: 100%;
-    padding: 10px;
-    background-color: #2ecc71;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+  .text{
+    color: orchid;
+    text-shadow: 3px 6px 5px 8px rgba(119, 53, 136, 0.759) ;
+    font-family: 'Times New Roman', Times, serif;
   }
-  
-  button:hover {
-    background-color: #27ae60;
-  }
+   
   
