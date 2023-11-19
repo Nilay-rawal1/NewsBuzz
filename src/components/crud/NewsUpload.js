@@ -23,7 +23,7 @@ const NewsUpload = () => {
 
       // Include the token in the request headers
       await axios.post(
-        'http://localhost:3000/news/upload',
+        'http://localhost:5000/news/upload',
         { title, content },
         {
           headers: {

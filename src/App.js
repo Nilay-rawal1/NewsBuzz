@@ -27,6 +27,7 @@ export default class App extends Component {
   }
 
   render() {
+
     return (
       <>
         <div style={{ background: "linear-gradient(89.7deg, rgb(22, 22, 5) 1.8%, rgb(12, 19, 50) 100%", overflow: "auto", height: "100%" }}>

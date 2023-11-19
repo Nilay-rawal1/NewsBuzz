@@ -5,7 +5,7 @@ const authroutes = require('./authroutes.js');
 const newsroutes = require('./newsroute.js');
 
 const app = express();
-const PORT = 3000; // Change as needed
+const PORT = 5000; // Change as needed
 
 app.use(bodyParser.json());
 
@@ -49,7 +49,7 @@ app.post("/register", async (req, res) => {
       status: false
     });
   }
-});
+});   
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

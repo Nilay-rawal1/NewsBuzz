@@ -9,10 +9,12 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const history = useHistory(); // Initialize useHistory
-
+  const transfer =()=>{
+    history.push('/');
+   }
   const handleLogin = async () => {
     try {
-      await axios.post('http://localhost:3000/auth/login', {
+      await axios.post('http://localhost:5000/auth/login', {
         username,
         password,
       });
@@ -27,7 +29,7 @@ const Login = () => {
 
   return (
     <div className='container contres' >
-      <form  className='borform' >
+      <form  className='borform' onSubmit={handleLogin} >
         <h1 className='text my-4 '>Login</h1>
         <div className='form-floating my-3 mb-3'>
           <input className='form-control'
@@ -48,7 +50,7 @@ const Login = () => {
           />
           <label>Password</label>
         </div>
-        <button  className='' onClick={handleLogin}>Login</button>
+        <button  onClick={transfer} className=''>Login</button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       </form>
     </div>
