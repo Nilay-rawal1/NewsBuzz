@@ -61,8 +61,8 @@ const Dashboard = () => {
           ))}
         </ul>
       </div>
-      <div>
-        <h3>Upload New Article</h3>
+      <div class="box">
+        <h3 class="heading">Upload New Article</h3>
         <input
           type="text"
           placeholder="Title"
