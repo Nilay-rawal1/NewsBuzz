@@ -36,7 +36,7 @@ const Login = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-          <label>Email address</label>
+          <label>Username</label>
         </div>
         <div className='form-floating my-3'>
           <input
