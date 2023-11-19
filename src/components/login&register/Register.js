@@ -1,4 +1,3 @@
-// Assuming this is your Register component
 
 import React, { useState } from 'react';
 import axios from 'axios';
@@ -7,6 +6,7 @@ import './Register.css';
 
 const Register = () => {
   const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const history = useHistory(); // Initialize useHistory
 
@@ -14,6 +14,7 @@ const Register = () => {
     try {
       await axios.post('http://localhost:3000/auth/register', {
         username,
+        email,
         password,
       });
       console.log('Registration successful');
@@ -25,35 +26,27 @@ const Register = () => {
   };
 
   return (
-
-    
-
-    <div className='container contres' >
-      <form  className='borform' >
-        <h1 className='text my-4 '>Register</h1>
-        <div className='form-floating my-3 mb-3'>
-          <input className='form-control'
-            type="email"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <label>Email address</label>
-        </div>
-        <div className='form-floating my-3'>
-          <input
-            className='form-control'
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <label>Password</label>
-        </div>
-        <button  className='my-3' onClick={handleRegister}>Register</button>
-
-      </form>
-
+    <div>
+      <h2>Register</h2>
+      <input
+        type="text"
+        placeholder="Username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
+      <input
+        type="email"
+        placeholder="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <button onClick={handleRegister}>Register</button>
     </div>
   );
 };
