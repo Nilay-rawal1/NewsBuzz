@@ -13,9 +13,9 @@ export class navbar extends Component {
     return (
           <>  
          
-          <div aria-hidden="true"></div>
+          <div aria-hidden="true "></div>
         <nav   className="navbar navbg fixed-top navbar-expand-lg  text-dark bg-dark navbar-dark" id=''>
-        <div className="container-fluid ">
+        <div className="container-fluid  my-2">
           <Link className="navbar-brand" to="/">NewsBuzz</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -45,21 +45,19 @@ export class navbar extends Component {
                 <Link className="nav-link" to="/technology">Technology</Link>
               </li>
 
-              <li>
-                <Link to="/dashboard">Dashboard</Link>
+              <li className='nav-item'>
+                <Link className="nav-link" to="/dashboard">Dashboard</Link>
               </li>
-
-              <li className='login login-right'>
-                <Link to='register'>Register</Link>
-              </li>
-              <li className='login'>
-                <Link to='login'>Login</Link>
-              </li>
-
-             
-              
               
             </ul>
+            
+            <button className='login login-right '>
+                <Link to='/register'>Register</Link>
+              </button>
+              <button className='login '>
+                <Link to='/login'>Login</Link>
+              </button>
+
             
           </div>
         </div>

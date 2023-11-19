@@ -26,24 +26,31 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <input
-        className='logininput'
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        className='logininput'
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleLogin}>Login</button>
+    <div className='container contres' >
+      <form  className='borform' >
+        <h1 className='text my-4 '>Login</h1>
+        <div className='form-floating my-3 mb-3'>
+          <input className='form-control'
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <label>Email address</label>
+        </div>
+        <div className='form-floating my-3'>
+          <input
+            className='form-control'
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <label>Password</label>
+        </div>
+        <button  className='' onClick={handleLogin}>Login</button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
+      </form>
     </div>
   );
 };
