@@ -28,7 +28,7 @@ const Register = () => {
     <div>
       <h2>Register</h2>
       <input
-        type="text"
+        type="email"
         placeholder="Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}

@@ -8,6 +8,8 @@ const router = express.Router();
 // News Article Upload
 router.post('/upload', authMiddleware, async (req, res) => {
   try {
+
+    console.log('Request body:', req.body);
     const { title, content } = req.body;
 
     // Create a new news article
