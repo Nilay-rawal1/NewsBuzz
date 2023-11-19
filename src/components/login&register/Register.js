@@ -1,4 +1,3 @@
-// Assuming this is your Register component
 
 import React, { useState } from 'react';
 import axios from 'axios';
@@ -7,6 +6,7 @@ import './Register.css';
 
 const Register = () => {
   const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const history = useHistory(); // Initialize useHistory
 
@@ -14,6 +14,7 @@ const Register = () => {
     try {
       await axios.post('http://localhost:3000/auth/register', {
         username,
+        email,
         password,
       });
       console.log('Registration successful');
@@ -28,10 +29,16 @@ const Register = () => {
     <div>
       <h2>Register</h2>
       <input
-        type="email"
+        type="text"
         placeholder="Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+      />
+      <input
+        type="email"
+        placeholder="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
       />
       <input
         type="password"

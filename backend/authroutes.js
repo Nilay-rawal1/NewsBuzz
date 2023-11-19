@@ -1,15 +1,22 @@
 // authRoutes.js
 const express = require('express');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const User = require('./models/models');
 
 const router = express.Router();
 const saltRounds = 10;
+const secretKey = 'qwerty'; // Replace with a secure secret key
 
 // User Registration
 router.post('/register', async (req, res) => {
   try {
-    const { username, password } = req.body;
+    const { username, email, password } = req.body;
+
+    // Validate input
+    if (!username || !email || !password) {
+      return res.status(400).json({ error: 'All fields are required' });
+    }
 
     // Check if the username already exists
     const existingUser = await User.findOne({ username });
@@ -21,7 +28,7 @@ router.post('/register', async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, saltRounds);
 
     // Create a new user
-    const newUser = new User({ username, password: hashedPassword });
+    const newUser = new User({ username, email, password: hashedPassword });
     await newUser.save();
 
     res.status(201).json({ message: 'User registered successfully' });
@@ -48,7 +55,10 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid username or password' });
     }
 
-    res.status(200).json({ message: 'Login successful' });
+    // Generate JWT token
+    const token = jwt.sign({ userId: user._id }, secretKey, { expiresIn: '1h' });
+
+    res.status(200).json({ message: 'Login successful', token });
   } catch (error) {
     console.error('Error during login:', error);
     res.status(500).json({ error: 'Internal server error' });

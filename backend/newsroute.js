@@ -1,7 +1,7 @@
 // newsRoutes.js
 const express = require('express');
 const News = require('./models/newsmodel');
-const authMiddleware = require('./authMiddleware');
+const authMiddleware = require('./authMiddleware'); 
 
 const router = express.Router();
 
