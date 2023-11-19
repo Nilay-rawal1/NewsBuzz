@@ -25,12 +25,15 @@ const Register = () => {
   };
 
   return (
+
+    
+
     <div className='container contres' >
       <form  className='borform' >
         <h1 className='text my-4 '>Register</h1>
         <div className='form-floating my-3 mb-3'>
           <input className='form-control'
-            type="text"
+            type="email"
             placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -50,6 +53,7 @@ const Register = () => {
         <button  className='my-3' onClick={handleRegister}>Register</button>
 
       </form>
+
     </div>
   );
 };

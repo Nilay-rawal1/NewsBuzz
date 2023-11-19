@@ -48,7 +48,7 @@ export default class News extends Component {
     
     
     this.setState({page:this.state.page +1})
-    let url =`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=f722eb14c7a4416ea26640e058592aa2&page=1&pagesize=${this.props.pagesize}`;
+    let url =`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=7310a9f750e7489989d145ee2c1a00dc&page=1&pagesize=${this.props.pagesize}`;
    
     let data = await fetch(url);
     let parseddata = await data.json();
