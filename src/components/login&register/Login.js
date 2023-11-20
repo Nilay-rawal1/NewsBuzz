@@ -3,13 +3,16 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom'; // Import useHistory
 import './Login.css';
+import { async } from 'q';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const history = useHistory(); // Initialize useHistory
-
+  const transfer = async() =>{
+    history.push('/')
+  }
   const handleLogin = async () => {
     try {
       await axios.post('http://localhost:3000/auth/login', {
@@ -48,7 +51,7 @@ const Login = () => {
           />
           <label>Password</label>
         </div>
-        <button  className='' onClick={handleLogin}>Login</button>
+        <button  className='' onClick={transfer}>Login</button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       </form>
     </div>
