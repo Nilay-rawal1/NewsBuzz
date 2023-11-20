@@ -23,7 +23,7 @@ export class navbar extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 text-dark">
               <li className="nav-item">
-                <Link className="nav-link tex-dark" aria-current="page" to="/">Home</Link>
+                <Link className="nav-link tex-dark" aria-current="page" to="/register">Home</Link>
               </li>
               
               <li className="nav-item">

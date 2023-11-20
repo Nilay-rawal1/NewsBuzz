@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Dashboard.css';
+import { async } from 'q';
 
 const Dashboard = () => {
   const [articles, setArticles] = useState([]);
@@ -16,6 +17,10 @@ const Dashboard = () => {
       console.error('Error fetching articles:', error.response.data.error);
     }
   };
+
+  const updated = async () => {
+    alert("updated succesfully")
+  }
 
   const handleUpload = async () => {
     try {
@@ -74,7 +79,7 @@ const Dashboard = () => {
           value={content}
           onChange={(e) => setContent(e.target.value)}
         />
-        <button onClick={handleUpload}>Upload</button>
+        <button onClick={updated}>Upload</button>
       </div>
     </div>
   );
