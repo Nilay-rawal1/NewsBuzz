@@ -26,9 +26,10 @@ const Register = () => {
   };
 
   return (
-    <div className='register-form'>
-      <h2>Register</h2>
-      <input 
+    <div className='register_name'>
+      <div className='boxx'>
+      <h2 className='text-light'>Register</h2>
+      <input
         type="text"
         placeholder="Username"
         value={username}
@@ -47,6 +48,7 @@ const Register = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button onClick={handleRegister}>Register</button>
+      </div>
     </div>
   );
 };
