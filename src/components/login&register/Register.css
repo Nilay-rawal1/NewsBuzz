@@ -1,24 +1,52 @@
 /* Register.css */
-.contres {
-    max-width: 800px;
-    height: 37.97em;
-    padding-top: 100px;
-    align-items: center;
-  }
+.h
+.register-form {
+  margin-left: 20vw;
+  max-width: 800px;
+  height: 37.97em;
+  padding-top: 100px;
+  align-items: center;
+}
 
-.borform{
-  align-items: center ;
+.borform {
+  align-items: center;
   box-shadow: 3px 6px 5px 8px rgba(119, 53, 136, 0.759) !important;
   width: 490px;
   padding: 40px;
   margin-bottom: 30px;
   border: 2px solid darkorchid;
-  border-radius: 15px ;
+  border-radius: 15px;
 }
 
-.text{
+.text {
   color: orchid;
-  text-shadow: 3px 6px 5px 8px rgba(119, 53, 136, 0.759) ;
+  text-shadow: 3px 6px 5px 8px rgba(119, 53, 136, 0.759);
   font-family: 'Times New Roman', Times, serif;
 }
- 
+
+.register-form h2 {
+  color: orchid;
+  text-shadow: 3px 6px 5px 8px rgba(119, 53, 136, 0.759);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.register-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: darkorchid;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-form button:hover {
+  background-color: purple;
+}

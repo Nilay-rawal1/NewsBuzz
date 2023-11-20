@@ -26,9 +26,9 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div className='register-form'>
       <h2>Register</h2>
-      <input
+      <input 
         type="text"
         placeholder="Username"
         value={username}
