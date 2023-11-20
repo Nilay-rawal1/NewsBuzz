@@ -7,7 +7,6 @@ const newsroutes = require('./newsroute.js');
 const app = express();
 const PORT = 3000; // Change as needed
 
-
 app.use(bodyParser.json());
 
 app.use('/auth', authroutes);
