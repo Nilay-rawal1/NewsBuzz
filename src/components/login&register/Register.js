@@ -18,6 +18,7 @@ const Register = () => {
         password,
       });
       console.log('Registration successful');
+      
       // Redirect to login after successful registration
       history.push('/Login');
     } catch (error) {
